@@ -1,0 +1,17 @@
+
+
+<div class="ui items" *ngFor='let tweet of tweets'>  <!--laço for, iteração-->
+
+  <div class="item">
+    <a class="ui tiny image">
+      <img src="{{tweet.avatar}}">
+    </a>
+    <div class="content">
+      <a class="header">{{tweet.name}}</a>
+      <div class="description">
+        <p>{{tweet.body}}</p>
+      </div>
+    </div>
+  </div>
+
+</div>
