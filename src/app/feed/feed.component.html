@@ -1,14 +1,15 @@
 <div class="ui segment">
 
 
-  <!--mensagem-->
-  <div class="ui yellow message" *ngIf='!tweets || !tweets.items'>  <!--checa se existe o array e se ele está vazio-->
+  <!--mensagem
+  <div class="ui yellow message" *ngIf='!tweets || !tweets.items'>  
     <i class="star icon"></i>
     Não existem tweets
   </div>
+  -->
 
 <!--listagem de tweets-->
-<app-tweet></app-tweet>
+<app-tweet *ngFor='let currTweet of tweets' [tweet]='currTweet'></app-tweet>
 
 
 

@@ -1,6 +1,6 @@
 
 
-<div class="ui items" *ngFor='let tweet of tweets'>  <!--laço for, iteração-->
+<div class="ui items" >  <!--laço for, iteração-->
 
   <div class="item">
     <a class="ui tiny image">
@@ -10,6 +10,14 @@
       <a class="header">{{tweet.name}}</a>
       <div class="description">
         <p>{{tweet.body}}</p>
+        <div class="ui labeled button" tabindex="0">
+            <div class="ui blue button" (click)='likeTweet(tweet)'>
+              <i class="heart icon"></i> Like
+            </div>
+            <a class="ui basic blue left pointing label">
+                {{tweet.likes.length}}
+            </a>
+          </div>
       </div>
     </div>
   </div>
