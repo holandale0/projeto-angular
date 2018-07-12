@@ -9,7 +9,7 @@
   -->
 
 <!--listagem de tweets-->
-<app-tweet *ngFor='let currTweet of tweets' [tweet]='currTweet'></app-tweet>
+<app-tweet *ngFor='let currTweet of tweets' [tweet]='currTweet'  (likedTweetChild)='handleTweetFromChildComponent($event)'></app-tweet>
 
 
 

@@ -1,4 +1,4 @@
-import { Component, Input,  OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter,  OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-tweet',
@@ -8,6 +8,7 @@ import { Component, Input,  OnInit } from '@angular/core';
 export class TweetComponent implements OnInit {
 
   @Input() tweet;
+  @Output() likedTweetChild = new EventEmitter<any>();
 
   constructor() { }
 
@@ -15,7 +16,8 @@ export class TweetComponent implements OnInit {
   }
 
   likeTweet(tweet){
-    console.log(tweet);
+    //console.log(tweet);
+    this.likedTweetChild.emit(tweet); // O método emit() envia o objeto tweet do componente filho(tweet) para o componente pai (feed)
   }
 
 }

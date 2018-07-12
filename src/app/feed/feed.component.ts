@@ -35,9 +35,23 @@ export class FeedComponent implements OnInit {
 
   ];
 
+  likedTweet = undefined;
+  currentUser = 'Stevie';
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  handleTweetFromChildComponent(tweet){
+
+    var index = this.tweets.findIndex(currTweet => {
+      return currTweet.user == tweet.user;
+    })
+
+    this.tweets[index].likes.push(this.currentUser);
+
+    console.log(this.tweets[index].likes);
   }
 
 }
