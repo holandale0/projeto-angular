@@ -1,47 +1,36 @@
 import { Component, OnInit } from '@angular/core';
+import { FeedService } from '../feed.service';
 
 @Component({
   selector: 'app-feed',
   templateUrl: './feed.component.html',
-  styleUrls: ['./feed.component.css']
+  styleUrls: ['./feed.component.css'],
+  providers: [FeedService]
 })
 export class FeedComponent implements OnInit {
 
-  tweets = [
-
-    {
-      user: "Jenny",
-      name: "Jenny Hess",
-      body: "Jenny is a student studying Media Management at the New School.",
-      likes: [],
-      avatar: "../assets/images/avatar/jenny.jpg",
-    },
-
-    {
-      user: "Veronika",
-      name: "Veronika Ossi",
-      body: "Veronika Ossi is a set designer living in New York who enjoys kittens, music, and partying.",
-      likes: [],
-      avatar: "../assets/images/avatar/veronika.jpg",
-    },
-
-    {
-      user: "Stevie",
-      name: "Stevie Feliciano",
-      body: "Stevie Feliciano is a library scientist living in New York City. She likes to spend her time reading, running, and writing.",
-      likes: ['Veronika','Jenny'],
-      avatar: "../assets/images/avatar/stevie.jpg",
-    },
-
-  ];
+  tweets;
 
   likedTweet = undefined;
   currentUser = 'Stevie';
 
-  constructor() { }
+  constructor(private feedService:FeedService) { }
 
   ngOnInit() {
+    this.feedService.getTweets().subscribe(data => {
+      this.tweets = data.json();
+    } )
   }
+
+
+  handleTweetFromChildComponent(tweet){
+
+  }
+
+
+
+
+  /*
 
   handleTweetFromChildComponent(tweet){
 
@@ -53,5 +42,31 @@ export class FeedComponent implements OnInit {
 
     console.log(this.tweets[index].likes);
   }
+
+
+
+
+
+
+isTweetedByUser(tweet){
+  return this.findTweet(tweet).likes.findIndex(currUser => {
+    return currUser == currUser
+  }) == -1
+}
+
+
+
+
+findTweet(tweet){
+    var index = this.tweets.findIndex(currTweet => {
+      return currTweet.user == tweet.user;
+    })
+    return this.tweets[index];
+  }
+
+
+*/
+
+
 
 }
