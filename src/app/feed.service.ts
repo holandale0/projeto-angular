@@ -16,8 +16,8 @@ export class FeedService {
 
 
 
-  likeTweet(){
-    
+  likeTweet(tweet){
+    return this.http.put(`${this.url}/${tweet.id}`, tweet);
   }
 
 

@@ -11,6 +11,9 @@ http://localhost:4200/
 #cria o servidor
 npm install -g json-server
 
+#inicia a aplicação angular
+ng s
+
 #inicia o servidor
 json-server --watch twitter_db.json
 

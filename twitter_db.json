@@ -1,31 +1,60 @@
 {
-
-    "tweets" : [
-
-              {
-                "user": "Jenny",
-                "name": "Jenny Hess",
-                "body": "Jenny is a student studying Media Management at the New School.",
-                "likes": [],
-                "avatar": "../assets/images/avatar/jenny.jpg"
-              },
-              
-              {
-                "user": "Veronika",
-                "name": "Veronika Ossi",
-                "body": "Veronika Ossi is a set designer living in New York who enjoys kittens, music, and partying.",
-                "likes": [],
-                "avatar": "../assets/images/avatar/veronika.jpg"
-              },
-              
-              {
-                "user": "Stevie",
-                "name": "Stevie Feliciano",
-                "body": "Stevie Feliciano is a library scientist living in New York City. She likes to spend her time reading, running, and writing.",
-                "likes": [],
-                "avatar": "../assets/images/avatar/stevie.jpg"
-              }
-
-    ]
-
+  "tweets": [
+    {
+      "id": 1,
+      "user": "Jenny",
+      "name": "Jenny Hess",
+      "body": "Jenny is a student studying Media Management at the New School.",
+      "likes": [
+        "Stevie",
+        "Stevie",
+        "Stevie",
+        "Stevie",
+        "Stevie"
+      ],
+      "avatar": "../assets/images/avatar/jenny.jpg"
+    },
+    {
+      "id": 2,
+      "user": "Veronika",
+      "name": "Veronika Ossi",
+      "body": "Veronika Ossi is a set designer living in New York who enjoys kittens, music, and partying.",
+      "likes": [
+        "Stevie",
+        "Stevie",
+        "Stevie",
+        "Stevie",
+        "Stevie"
+      ],
+      "avatar": "../assets/images/avatar/veronika.jpg"
+    },
+    {
+      "id": 3,
+      "user": "Stevie",
+      "name": "Stevie Feliciano",
+      "body": "Stevie Feliciano is a library scientist living in New York City. She likes to spend her time reading, running, and writing.",
+      "likes": [
+        "Stevie",
+        "Stevie",
+        "Stevie",
+        "Stevie",
+        "Stevie"
+      ],
+      "avatar": "../assets/images/avatar/stevie.jpg"
+    },
+    {
+      "id": 4,
+      "user": "Leo",
+      "name": "Leo Holanda",
+      "body": "Leo Holanda works with TI.",
+      "likes": [
+        "Stevie",
+        "Stevie",
+        "Stevie",
+        "Stevie",
+        "Stevie"
+      ],
+      "avatar": "../assets/images/avatar/leo.jpg"
+    }
+  ]
 }

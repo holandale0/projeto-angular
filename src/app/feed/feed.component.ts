@@ -24,6 +24,10 @@ export class FeedComponent implements OnInit {
 
 
   handleTweetFromChildComponent(tweet){
+    tweet.likes.push(this.currentUser);
+    this.feedService.likeTweet(tweet).subscribe(data => {
+      console.log(data.json());
+    })
 
   }
 
